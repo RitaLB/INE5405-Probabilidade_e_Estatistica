@@ -3,6 +3,7 @@ library(dplyr)
 library(RColorBrewer)
 library(scales)
 
+dados <- read.csv("operacoes.csv")
 # Calcule a frequência de crimes
 freq_crimes <- dados %>%
   count(Sigla.Unidade.Federativa, Area) %>%

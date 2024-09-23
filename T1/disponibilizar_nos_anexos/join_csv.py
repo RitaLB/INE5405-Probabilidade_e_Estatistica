@@ -21,4 +21,4 @@ for arquivo in arquivos_csv:
 df_final = pd.concat(dataframes)
 
 # Salvar o dataframe final em um novo arquivo CSV
-df_final.to_csv('operacoes.csv', index=False, sep=',')
+df_final.to_csv(os.path.join(os.getcwd(), 'geradores_de_graficos', 'operacoes.csv'), index=False, sep=',')

@@ -4,6 +4,7 @@ library(sf)
 library(maps)
 library(geobr)
 
+dados <- read.csv("operacoes.csv")
 freq_estados <- dados %>%
   count(Sigla.Unidade.Federativa) %>%
   rename(frequencia = n)
@@ -33,6 +34,3 @@ ggplot(data = mapa_frequencia) +
   geom_sf_label(aes(label = frequencia), size = 2.5, color = "black", 
                 fill = "white", label.padding = unit(0.2, "lines"),
                 nudge_x = 0.1, nudge_y = 0.1)  # Ajuste conforme necessário
-
-
-
